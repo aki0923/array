@@ -11,6 +11,7 @@ public class Arrays {
         System.out.println(randomNums[0]);
         System.out.println(randomNums[1]);
         System.out.println(randomNums[2]);
+        System.out.println(" ");
 
         int x =sc.nextInt();
         int y = sc.nextInt();
@@ -18,11 +19,21 @@ public class Arrays {
 
         int[] exampleNums = {x, y, z};
         int correct = 0;
-        for (int i = 0; i <3; i++) {
-            if(randomNums[i] == exampleNums[i]) {
-                correct++;
+        
+        System.out.println(" ");
+        for (int i = 0; i < 3; i++)
+        {
+            int a = exampleNums[i];
+            for (int j = 0; j < 3; j++)
+            {
+                if (a == randomNums[j])
+                {
+                    System.out.println(a);
+                    System.out.println("detected");
+                    correct++;
+                    break;
+                }
             }
         }
-        System.out.println("You have "+ correct +" correct");
     }
 }
